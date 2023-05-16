@@ -67,7 +67,7 @@ const Editable = ({ text, rowIndex, rowId, rowValue, tag, onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    onSubmit(rowId, inputValue, rowIndex)
+    onSubmit(rowId, inputValue, rowIndex, tag)
     setShowEdit(false)
     setInputValue('')
   }

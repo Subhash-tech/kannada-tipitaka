@@ -17,14 +17,14 @@ export const translationSlice = createSlice({
     updateInitialState: (state, action) => {
       const { payload } = action
       if (payload.type === 'kannada') {
-        state.kannadaRows = payload.rows.filter((item)=>{
+        state.kannadaRows = payload.rows.filter((item) => {
           return item.text.length !== 0
-       })
+        })
       }
       if (payload.type === 'pali') {
-        state.paliRows = payload.rows.filter((item)=>{
+        state.paliRows = payload.rows.filter((item) => {
           return item.text.length !== 0
-       })
+        })
       }
     },
     selectAllRows: (state, action) => {
@@ -123,7 +123,7 @@ export const translationSlice = createSlice({
         // check if the value has any new line
         const newArray = payload.value.split('\n').map((item) => ({
           id: nanoid(),
-          type: 'p',
+          type: payload.tag,
           isSelected: false,
           text: item,
         }))

@@ -67,11 +67,13 @@ const TranslationTable = (props) => {
     tableRows = kannadaRows
     selectedRows = selectedKannadaRows
   }
-  console.log('Rows', tableRows.length)
+
   if (props.language === 'pali') {
     tableRows = paliRows
     selectedRows = selectedPaliRows
   }
+
+  console.log('Rows', tableRows.length)
 
   const handleFileInputChange = (e) => {
     const file = e.target.files[0]
@@ -124,13 +126,14 @@ const TranslationTable = (props) => {
     }
   }
 
-  const editRowValue = (rowId, updatedValue, rowIndex) => {
+  const editRowValue = (rowId, updatedValue, rowIndex, tag) => {
     dispatch(
       updateOneRow({
         id: rowId,
         value: updatedValue,
         index: rowIndex,
         type: props.language,
+        tag: tag
       })
     )
   }
