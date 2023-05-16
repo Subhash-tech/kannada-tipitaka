@@ -1,0 +1,66 @@
+.editable {
+    width: 100%;
+    height: 100%;
+    min-height: 160px;
+    max-height: 160px;
+    /* padding: 8px 16px; */
+}
+
+.editable_display {
+    min-height: 100%;
+    max-height: 100%;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.editable_display svg {
+    height: 14px;
+    width: 14px;
+}
+
+.editable_display:hover {
+    background-color: #ccc;
+}
+
+.editable_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 160px;
+    max-height: 160px;
+}
+
+.editable_form input {
+    font-size: 1rem;
+    border: 1px solid #1379ec;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+}
+
+.editable_footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.editable_footer button {
+    color: #fff;
+    background-color: #1379ec;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.editable_footer button:hover {
+    background-color: #0768d6;
+}
+
+.editable_footer svg {
+    cursor: pointer;
+}
